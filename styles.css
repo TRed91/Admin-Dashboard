@@ -1,5 +1,19 @@
+@font-face {
+    font-family: "Lato";
+    src: url("fonts/lato-regular-webfont.woff2") format("woff2"),
+        url("fonts/lato-regular-webfont.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("fonts/lato-bold-webfont.woff2") format("woff2"),
+        url("fonts/lato-bold-webfont.woff") format("woff");
+    font-weight: bold;
+}
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "lato";
     box-sizing: border-box;
 
 }
@@ -10,8 +24,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 :root {
-    --color-scheme-1: rgb(79, 134, 207);
-    --color-scheme-2: #eaeaea;
+    --color-scheme-1: #2e2e58;
+    --color-scheme-2: #e2e2e2;
+    --filter-white: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(0%) hue-rotate(16deg) brightness(102%) contrast(103%);
 }
 
 body {
@@ -35,6 +50,49 @@ body {
     padding-top: 20px;
     font-size: 25px;
     font-weight: bold;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-icon{
+    height: 1.2em;
+    filter: var(--filter-white);
+}
+
+.sidebar-icon {
+    height: 1.2em;
+    filter: var(--filter-white);
+}
+
+.header-icon {
+    height: 25px;
+}
+
+.card-icon {
+    height: 30px
+}
+
+.star {
+    background-image: url("graphics/star-plus-outline.svg");
+    background-size: contain;
+    height: 25px;
+    width: 25px;
+}
+
+.eye {
+    background-image: url("graphics/eye-plus-outline.svg");
+    background-size: contain;
+    height: 25px;
+    width: 25px;
+}
+
+.fork {
+    background-image: url("graphics/source-fork.svg");
+    background-size: contain;
+    height: 25px;
+    width: 25px;
 }
 
 .header {
@@ -57,6 +115,10 @@ body {
     padding-left: max(10px, 2vw);
     width: 90%;
     align-self: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
 }
 
 .searchbar input {
@@ -240,6 +302,10 @@ li {
     font-size: 20px;
     font-weight: bold;
     padding: 10px 0px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
 }
 
 .buttons {
