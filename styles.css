@@ -148,16 +148,17 @@ body {
     padding: 0px max(10px, 2vw) 20px;
 }
 
-.profile-piture-small,
-.profile-piture-big {
+.profile-picture-small,
+.profile-picture-big {
     background-color: rgb(251, 255, 132);
     width: 40px;
     height: 40px;
     border: 2px orange solid;
     border-radius: 20px;
+    position: relative;
 }
 
-.profile-piture-big {
+.profile-picture-big {
     width: 60px;
     height: 60px;
     border-radius: 30px;
@@ -258,7 +259,11 @@ p {
 }
 
 .announcements {
-    grid-area: 1 / 2 / 2 / 3
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.announcement-msg {
+    overflow: scroll;
 }
 
 .announcement-msg > p {
@@ -273,6 +278,7 @@ p {
 .user-image {
     grid-area: 1 / 1 / 3 / 2;
     margin-right: 10px;
+    position: relative;
 }
 
 .user-image {
@@ -322,4 +328,13 @@ button {
     height: 40px;
     width: 90px;
     margin: 0px 5px
+}
+
+.pic {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    left: 15%;
+    top: 15%;
+    background-image: url("graphics/snake.svg");
 }
